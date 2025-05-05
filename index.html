@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Simple Task Manager</h1>
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Task Title" required>
+      <input type="text" id="task-desc" placeholder="Task Description">
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div class="task-section">
+      <h2>📋 Incomplete Tasks</h2>
+      <ul id="incomplete-tasks" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+    </div>
+
+    <div class="task-section">
+      <h2>✅ Completed Tasks</h2>
+      <ul id="completed-tasks" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
